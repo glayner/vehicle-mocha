@@ -1,0 +1,57 @@
+{
+  "name": "vehicle-mocha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.ts",
+  "scripts": {
+    "ready": "npm install && npx prisma migrate dev",
+    "start": "ts-node src/shared/server.ts",
+    "dev": "ts-node-dev --inspect --pretty --transpile-only --ignore-watch node_modules --respawn src/shared/server.ts",
+    "test": "mocha --require ts-node/register __tests__/**/*.test.ts --exit"
+  },
+  "keywords": [
+    "crud",
+    "mocha",
+    "info-tecnologia",
+    "test"
+  ],
+  "author": "",
+  "license": "ISC",
+  "prisma": {
+    "schema": "src/shared/prisma/schema.prisma"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.11.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "joi": "^17.9.0",
+    "swagger-ui-express": "^4.6.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/express": "^4.17.17",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^18.15.3",
+    "@types/sinon": "^10.0.13",
+    "@types/swagger-ui-express": "^4.1.3",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "mocha": "^10.2.0",
+    "prettier": "^2.8.5",
+    "prisma": "^4.11.0",
+    "sinon": "^15.0.2",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.2"
+  }
+}
